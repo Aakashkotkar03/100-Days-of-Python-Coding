@@ -1,0 +1,46 @@
+import random
+rand = random.randint(0,2)
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+RPS = [rock, paper, scissors]
+player = int(input("welcome to RPS Challenge! Please choose 0 for Rock, 1 for paper, 2 for Scissors"))
+result = RPS[rand]
+you = RPS[player]
+print()
+if rand == player:
+    print(f"You both choose {result} So Its a draw. Try again")
+elif player == 0 and rand == 2:
+    print(f"You choose {you} & PC choose {result} so you win")
+elif player == 2 and rand == 0:
+    print(f"You choose {you} & PC choose {result} so you loose")
+elif player == 2 and rand == 1:
+    print(f"You choose {you} & PC choose {result} so you win")
+elif player == 1 and rand == 2:
+    print(f"You choose {you} & PC choose {result} so you loose")
+elif player == 1 and rand == 0:
+    print(f"You choose {you} & PC choose {result} so you win")
+elif player == 0 and rand == 1:
+    print(f"You choose {you} & PC choose {result} so you loose")
